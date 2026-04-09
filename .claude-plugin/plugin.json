@@ -1,0 +1,11 @@
+{
+  "name": "office-hour-plugin",
+  "version": "0.1.0",
+  "description": "Structured multi-agent team workflows for development and research tasks. Orchestrates leaders, developers, reviewers, and researchers into coordinated review cycles.",
+  "author": {
+    "name": "FesonX"
+  },
+  "repository": "https://github.com/FesonX/office-hour-plugin",
+  "license": "MIT",
+  "keywords": ["team", "workflow", "multi-agent", "review", "research", "development"]
+}
