@@ -28,7 +28,53 @@ Launches a full multi-agent team for complex development or research tasks.
 
 ## Installation
 
-Download the `.plugin` file from [Releases](https://github.com/FesonX/office-hour-plugin/releases) and install it in Claude Cowork or Claude Code.
+### Quick install (recommended)
+
+Add the marketplace and install the plugin with two commands inside Claude Code:
+
+```
+/plugin marketplace add FesonX/office-hour-plugin
+/plugin install office-hour-plugin@fesonx
+```
+
+Then reload to activate:
+
+```
+/reload-plugins
+```
+
+### Install with the CLI
+
+Run these outside of a Claude session:
+
+```bash
+claude plugin marketplace add FesonX/office-hour-plugin
+claude plugin install office-hour-plugin@fesonx
+```
+
+### Installation scope
+
+By default the plugin installs to your **user** scope (available across all projects). To install for a specific project instead:
+
+```bash
+# Share with your team via .claude/settings.json
+claude plugin install office-hour-plugin@fesonx --scope project
+
+# Personal use in this project only (gitignored)
+claude plugin install office-hour-plugin@fesonx --scope local
+```
+
+### Update
+
+```
+/plugin marketplace update fesonx
+```
+
+### Uninstall
+
+```
+/plugin uninstall office-hour-plugin@fesonx
+```
 
 ## Roadmap
 

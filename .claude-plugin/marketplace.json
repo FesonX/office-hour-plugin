@@ -1,0 +1,25 @@
+{
+  "name": "fesonx",
+  "owner": {
+    "name": "FesonX",
+    "email": "fesonx@foxmail.com"
+  },
+  "metadata": {
+    "description": "FesonX's Claude Code plugins"
+  },
+  "plugins": [
+    {
+      "name": "office-hour-plugin",
+      "source": "./",
+      "description": "Structured multi-agent team workflows for development and research tasks. Orchestrates leaders, developers, reviewers, and researchers into coordinated review cycles.",
+      "version": "0.1.0",
+      "author": {
+        "name": "FesonX"
+      },
+      "homepage": "https://github.com/FesonX/office-hour-plugin",
+      "repository": "https://github.com/FesonX/office-hour-plugin",
+      "license": "MIT",
+      "keywords": ["team", "workflow", "multi-agent", "review", "research", "development"]
+    }
+  ]
+}
