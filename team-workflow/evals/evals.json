@@ -1,0 +1,45 @@
+{
+  "skill_name": "team-workflow",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need to build a user authentication system for my Node.js app. It should support email/password login, JWT tokens, and a password reset flow. The login and reset flows touch different files so they can be built at the same time. Use the team workflow skill to set this up.",
+      "expected_output": "Claude confirms with user via AskUserQuestion showing dev workflow, 4 phases, 2 parallel developers, 2 reviewers, 1 spawned leader. File-path handoff and round limits in worker prompts.",
+      "files": [],
+      "assertions": [
+        "Output includes a proposal/question to the user (AskUserQuestion) BEFORE describing team creation steps",
+        "Leader is listed as a spawned agent member, not described as 'you' or 'the current session'",
+        "Both reviewer-a and reviewer-b appear in the team design",
+        "Two developers (developer-1/developer-2) are proposed for login and reset flows respectively",
+        "At least one worker prompt instructs sending file paths only, not full content, in handoff messages",
+        "At least one reviewer or developer prompt mentions a maximum of 3 rounds or tracks round number"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Can you research the best approach for implementing a distributed rate limiter? I want a proper research workflow with peer review — two reviewers who can push back on each other.",
+      "expected_output": "Claude confirms research workflow (research→review), 1 researcher, 2 reviewers who can disagree, 1 spawned leader. Reviewer prompts explicitly allow disagreement and prohibit file writing.",
+      "files": [],
+      "assertions": [
+        "Output identifies this as a research workflow (not development), with phases: research → review",
+        "Output includes a proposal/question to the user before describing team creation",
+        "Reviewer prompts explicitly state they can disagree with the other reviewer and should not defer",
+        "Reviewer prompts instruct reviewers NOT to write code or files — feedback text only",
+        "Leader is listed as a spawned agent member, not described as 'you' or 'the current session'"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Use team workflow to implement two independent features for my Python Flask app: (1) a CSV export endpoint that writes to export_handler.py, and (2) a webhook notification system that writes to webhook_handler.py. These are completely separate files.",
+      "expected_output": "Claude proposes 2 parallel developers with exclusive file ownership. Each developer prompt names only its own file and prohibits touching the other's. Leader is a spawned agent. File-path handoffs in prompts.",
+      "files": [],
+      "assertions": [
+        "Two separate developers (developer-1 and developer-2, or equivalent) appear in the team design",
+        "Each developer prompt specifies exclusive file ownership and instructs NOT to touch the other developer's files",
+        "At least one worker prompt instructs sending file paths only, not full content, in handoff messages",
+        "Leader is listed as a spawned agent member, not described as 'you' or 'the current session'",
+        "Output includes a proposal/question to the user before describing team creation"
+      ]
+    }
+  ]
+}
