@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.2] - 2026-04-21
+
+### Added
+- `deep-dialogue` skill for structured intellectual discussions with Socratic questioning and co-exploration modes
+
 ## [0.1.1] - 2026-04-21
 
 ### Changed

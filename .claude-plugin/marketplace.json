@@ -12,7 +12,7 @@
       "name": "office-hour-plugin",
       "source": "./",
       "description": "Structured multi-agent team workflows for development and research tasks. Orchestrates leaders, developers, reviewers, and researchers into coordinated review cycles.",
-      "version": "0.1.0",
+      "version": "0.1.2",
       "author": {
         "name": "FesonX"
       },
